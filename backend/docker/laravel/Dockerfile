@@ -14,7 +14,8 @@ RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS curl-dev openssl-dev p
     libc6-compat \
     git \
     unzip \
-    shadow && \
+    shadow \
+    supervisor && \
     docker-php-ext-install \
     pcntl \
     pdo \
@@ -28,6 +29,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 RUN adduser -g $WWWGROUP -u 1000 -D sail
+
+COPY ./docker/laravel/supervisord.conf /etc/supervisord.conf
 
 COPY ./docker/laravel/start-container /usr/local/bin/start-container
 COPY ./docker/laravel/php.ini /usr/local/etc/php/conf.d/99-custom.ini
@@ -51,4 +54,4 @@ RUN composer dump-autoload --optimize \
     && php artisan view:cache
 
 EXPOSE 9000
-CMD ["php-fpm"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h1>Lista de Pessoas</h1>
+    <button class="btn btn-primary mb-3" (click)="router.navigate(['/persons/create'])">Novo Contato</button>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{ person.name }}</td>
+          <td>
+            <button class="btn btn-primary me-2" (click)="person.id ? editPerson(person.id) : null">Editar</button>
+            <button class="btn btn-danger" (click)="person.id ? deletePerson(person.id) : null">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

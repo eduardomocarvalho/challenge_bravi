@@ -1,0 +1,203 @@
+2024-05-24 21:14:25,740 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:14:25,764 INFO supervisord started with pid 1
+2024-05-24 21:14:26,768 INFO spawned: 'php-fpm' with pid 8
+2024-05-24 21:14:26,775 INFO spawned: 'watcher' with pid 9
+2024-05-24 21:14:26,789 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:14:27,872 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:14:27,875 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:14:27,880 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:14:29,882 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:14:29,889 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:14:32,895 INFO spawned: 'watcher' with pid 14
+2024-05-24 21:14:32,902 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:14:32,903 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:17:20,098 WARN received SIGQUIT indicating exit request
+2024-05-24 21:17:20,100 INFO waiting for php-fpm to die
+2024-05-24 21:17:21,112 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:18:04,811 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:18:04,834 INFO supervisord started with pid 1
+2024-05-24 21:18:05,838 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:18:05,845 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:18:05,854 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:18:06,987 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:18:06,992 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:18:06,997 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:18:09,002 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:18:09,008 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:18:12,015 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:18:12,022 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:18:12,023 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:20:07,151 WARN received SIGQUIT indicating exit request
+2024-05-24 21:20:07,153 INFO waiting for php-fpm to die
+2024-05-24 21:20:08,166 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:24:31,632 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:24:31,674 INFO supervisord started with pid 1
+2024-05-24 21:24:32,681 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:24:32,689 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:24:32,700 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:24:33,826 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:24:33,830 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:24:33,836 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:24:35,840 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:24:35,847 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:24:38,854 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:24:38,859 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:24:38,861 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:26:03,956 WARN received SIGQUIT indicating exit request
+2024-05-24 21:26:03,957 INFO waiting for php-fpm to die
+2024-05-24 21:26:04,975 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:33:37,276 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:33:37,290 INFO supervisord started with pid 1
+2024-05-24 21:33:38,294 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:33:38,299 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:33:38,312 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:33:39,386 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:33:39,391 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:33:39,396 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:33:41,402 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:33:41,408 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:33:44,415 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:33:44,421 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:33:44,422 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:39:37,827 WARN received SIGQUIT indicating exit request
+2024-05-24 21:39:37,828 INFO waiting for php-fpm to die
+2024-05-24 21:39:38,835 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:40:20,504 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:40:20,522 INFO supervisord started with pid 1
+2024-05-24 21:40:21,525 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:40:21,531 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:40:21,542 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:40:22,642 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:40:22,646 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:40:22,653 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:40:24,658 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:40:24,665 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:40:27,672 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:40:27,680 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:40:28,683 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:44:02,929 WARN received SIGQUIT indicating exit request
+2024-05-24 21:44:02,930 INFO waiting for php-fpm to die
+2024-05-24 21:44:03,942 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:44:44,895 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:44:44,913 INFO supervisord started with pid 1
+2024-05-24 21:44:45,916 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:44:45,922 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:44:45,932 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:44:47,047 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:44:47,049 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:44:47,054 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:44:49,059 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:44:49,067 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:44:52,073 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:44:52,080 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:44:52,081 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:48:32,787 WARN received SIGQUIT indicating exit request
+2024-05-24 21:48:32,788 INFO waiting for php-fpm to die
+2024-05-24 21:48:33,800 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:48:57,329 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:48:57,343 INFO supervisord started with pid 1
+2024-05-24 21:48:58,347 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:48:58,352 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:48:58,362 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:48:59,399 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:48:59,403 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:48:59,409 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:49:01,415 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:49:01,423 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:49:04,429 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:49:04,436 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:49:04,437 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:51:30,607 WARN received SIGQUIT indicating exit request
+2024-05-24 21:51:30,609 INFO waiting for php-fpm to die
+2024-05-24 21:51:31,616 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:52:11,265 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:52:11,284 INFO supervisord started with pid 1
+2024-05-24 21:52:12,288 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:52:12,297 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:52:12,309 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:52:13,416 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:52:13,419 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:52:13,426 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:52:15,432 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:52:15,439 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:52:18,446 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:52:18,454 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:52:18,456 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:52:32,470 WARN received SIGQUIT indicating exit request
+2024-05-24 21:52:32,471 INFO waiting for php-fpm to die
+2024-05-24 21:52:33,484 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:54:06,526 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:54:06,541 INFO supervisord started with pid 1
+2024-05-24 21:54:07,547 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:54:07,551 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:54:07,559 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:54:08,601 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:54:08,605 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:54:08,606 WARN received SIGQUIT indicating exit request
+2024-05-24 21:54:08,607 INFO waiting for php-fpm, watcher to die
+2024-05-24 21:54:08,610 INFO stopped: watcher (exit status 0)
+2024-05-24 21:54:08,620 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:54:42,690 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:54:42,704 INFO supervisord started with pid 1
+2024-05-24 21:54:43,707 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:54:43,712 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:54:43,722 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:54:44,762 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:54:44,766 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:54:44,773 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:54:46,778 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:54:46,783 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:54:49,791 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:54:49,802 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:54:49,803 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 21:57:20,982 WARN received SIGQUIT indicating exit request
+2024-05-24 21:57:20,984 INFO waiting for php-fpm to die
+2024-05-24 21:57:21,990 INFO stopped: php-fpm (exit status 0)
+2024-05-24 21:58:08,925 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 21:58:08,952 INFO supervisord started with pid 1
+2024-05-24 21:58:09,956 INFO spawned: 'php-fpm' with pid 7
+2024-05-24 21:58:09,964 INFO spawned: 'watcher' with pid 8
+2024-05-24 21:58:09,973 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:58:11,105 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 21:58:11,108 INFO spawned: 'watcher' with pid 11
+2024-05-24 21:58:11,114 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:58:13,119 INFO spawned: 'watcher' with pid 12
+2024-05-24 21:58:13,126 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:58:16,132 INFO spawned: 'watcher' with pid 13
+2024-05-24 21:58:16,137 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 21:58:16,139 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 22:00:07,273 WARN received SIGQUIT indicating exit request
+2024-05-24 22:00:07,275 INFO waiting for php-fpm to die
+2024-05-24 22:00:08,292 INFO stopped: php-fpm (exit status 0)
+2024-05-24 22:01:10,565 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 22:01:10,585 INFO supervisord started with pid 1
+2024-05-24 22:01:11,589 INFO spawned: 'php-fpm' with pid 8
+2024-05-24 22:01:11,599 INFO spawned: 'watcher' with pid 9
+2024-05-24 22:01:11,612 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:01:12,755 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 22:01:12,760 INFO spawned: 'watcher' with pid 12
+2024-05-24 22:01:12,765 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:01:14,770 INFO spawned: 'watcher' with pid 13
+2024-05-24 22:01:14,777 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:01:17,784 INFO spawned: 'watcher' with pid 14
+2024-05-24 22:01:17,789 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:01:17,790 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 22:13:28,652 WARN received SIGQUIT indicating exit request
+2024-05-24 22:13:28,654 INFO waiting for php-fpm to die
+2024-05-24 22:13:29,672 INFO stopped: php-fpm (exit status 0)
+2024-05-24 22:27:45,640 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-05-24 22:27:45,679 INFO supervisord started with pid 1
+2024-05-24 22:27:46,685 INFO spawned: 'php-fpm' with pid 8
+2024-05-24 22:27:46,701 INFO spawned: 'watcher' with pid 9
+2024-05-24 22:27:46,715 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:27:47,824 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-05-24 22:27:47,828 INFO spawned: 'watcher' with pid 12
+2024-05-24 22:27:47,834 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:27:49,839 INFO spawned: 'watcher' with pid 13
+2024-05-24 22:27:49,844 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:27:52,851 INFO spawned: 'watcher' with pid 14
+2024-05-24 22:27:52,857 WARN exited: watcher (exit status 0; not expected)
+2024-05-24 22:27:52,858 INFO gave up: watcher entered FATAL state, too many start retries too quickly
+2024-05-24 22:31:45,135 WARN received SIGQUIT indicating exit request
+2024-05-24 22:31:45,137 INFO waiting for php-fpm to die
+2024-05-24 22:31:46,144 INFO stopped: php-fpm (exit status 0)

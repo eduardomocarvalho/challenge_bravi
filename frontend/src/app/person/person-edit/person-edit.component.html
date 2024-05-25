@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Editar Pessoa</h2>
+    <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input id="name" type="text" formControlName="name" class="form-control">
+        <div *ngIf="personForm.get('name')?.invalid && (personForm.get('name')?.dirty || personForm.get('name')?.touched)" class="text-danger">
+          <div *ngIf="personForm.get('name')?.errors?.['required']">Nome é obrigatório.</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="contactType" class="form-label">Tipo de Contato</label>
+        <select id="contactType" formControlName="contactType" class="form-select">
+          <option value="phone">Telefone</option>
+          <option value="email">Email</option>
+          <option value="whatsapp">Whatsapp</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contato</label>
+        <input id="contact" type="text" formControlName="contact" class="form-control">
+        <div *ngIf="personForm.get('contact')?.invalid && (personForm.get('contact')?.dirty || personForm.get('contact')?.touched)" class="text-danger">
+          <div *ngIf="personForm.get('contact')?.errors?.['required']">Contato é obrigatório.</div>
+          <div *ngIf="personForm.get('contact')?.errors?.['pattern']">Formato de contato inválido.</div>
+          <div *ngIf="personForm.get('contact')?.errors?.['email']">Email inválido.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="personForm.invalid">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+    </form>
+  </div>
+  
