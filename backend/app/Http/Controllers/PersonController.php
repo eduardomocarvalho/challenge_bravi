@@ -14,6 +14,17 @@ class PersonController extends Controller
 
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'contacts' => 'required|array|min:1',
+            'contacts.*.type' => 'required|string|max:255',
+            'contacts.*.value' => 'required|string|max:255',
+        ], [
+            'contacts.required' => 'At least one contact is required.',
+            'contacts.*.type.required' => 'The type (email, telefone, or whatsapp) is required.',
+            'contacts.*.value.required' => 'The value (email, telefone, or whatsapp) is required.',
+        ]);
+
         $person = Person::create($request->only('name'));
         $contacts = $request->input('contacts', []);
         foreach ($contacts as $contact) {
@@ -29,6 +40,18 @@ class PersonController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'contacts' => 'required|array|min:1',
+            'contacts.*.type' => 'required|string|max:255',
+            'contacts.*.value' => 'required|string|max:255',
+        ], [
+            'contacts.required' => 'At least one contact is required.',
+            'contacts.*.type.required' => 'The type (email, telefone, or whatsapp) is required.',
+            'contacts.*.value.required' => 'The value (email, telefone, or whatsapp) is required.',
+        ]);
+        
         $person = Person::findOrFail($id);
         $person->update($request->only('name'));
 

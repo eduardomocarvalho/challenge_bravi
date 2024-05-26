@@ -10,6 +10,8 @@ import { PersonService } from '../person.service';
 })
 export class PersonCreateComponent implements OnInit {
   personForm: FormGroup;
+  errorMessage: string | null = null;
+  contactTypes = ['email', 'telefone', 'whatsapp'];
 
   constructor(
     private fb: FormBuilder,
@@ -43,6 +45,16 @@ export class PersonCreateComponent implements OnInit {
     this.contacts().removeAt(i);
   }
 
+  getMask(type: string): string {
+    switch (type) {
+      case 'telefone':
+      case 'whatsapp':
+        return '(00) 0 0000-0000';
+      default:
+        return '';
+    }
+  }
+
   onContactTypeChange(index: number): void {
     const contact = this.contacts().at(index);
     const valueControl = contact.get('value');
@@ -59,9 +71,14 @@ export class PersonCreateComponent implements OnInit {
 
   onSubmit(): void {
     if (this.personForm.valid) {
-      this.personService.createPerson(this.personForm.value).subscribe(() => {
-        this.router.navigate(['/persons']);
-      });
+      this.personService.createPerson(this.personForm.value).subscribe(
+        () => {
+          this.router.navigate(['/persons']);
+        },
+        (error) => {
+          this.errorMessage = error.message || 'Ocorreu um erro desconhecido';
+        }
+      );
     }
   }
 

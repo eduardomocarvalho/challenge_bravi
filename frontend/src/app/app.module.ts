@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PersonListComponent } from './person/person-list/person-list.component';
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
+import { MaskDirective } from './mask.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonListComponent,
     PersonEditComponent,
-    PersonCreateComponent
+    PersonCreateComponent,
+    MaskDirective
   ],
   imports: [
     BrowserModule,

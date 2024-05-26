@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonService } from '../person.service';
 import { Person } from '../person.model';
@@ -13,6 +13,7 @@ export class PersonEditComponent implements OnInit {
   personForm: FormGroup;
   personId: string | null;
   contactTypes = ['email', 'telefone', 'whatsapp'];
+  errorMessage: string | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -39,10 +40,22 @@ export class PersonEditComponent implements OnInit {
           });
           this.contacts().push(contactGroup);
         });
+      }, (error) => {
+        this.errorMessage = error.message || 'Erro ao carregar os dados da pessoa';
       });
     }
   }
 
+  getMask(type: string): string {
+    switch (type) {
+      case 'telefone':
+      case 'whatsapp':
+        return '(00) 0 0000-0000';
+      default:
+        return '';
+    }
+  }
+  
   contacts(): FormArray {
     return this.personForm.get('contacts') as FormArray;
   }
@@ -63,7 +76,7 @@ export class PersonEditComponent implements OnInit {
   }
 
   onContactTypeChange(index: number): void {
-    const contact = this.contacts().at(index) as FormGroup;
+    const contact = this.contacts().at(index);
     const valueControl = contact.get('value');
     const typeControl = contact.get('type');
     if (valueControl && typeControl) {
@@ -77,10 +90,15 @@ export class PersonEditComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.personForm.valid && this.personId) {
-      this.personService.updatePerson(this.personId, this.personForm.value).subscribe(() => {
-        this.router.navigate(['/persons']);
-      });
+    if (this.personId) {
+      this.personService.updatePerson(this.personId, this.personForm.value).subscribe(
+        () => {
+          this.router.navigate(['/persons']);
+        },
+        (error) => {
+          this.errorMessage = error.message || 'Ocorreu um erro desconhecido';
+        }
+      );
     }
   }
 
