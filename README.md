@@ -56,7 +56,7 @@ The front-end application is built with Angular and provides a user interface fo
    
 2. The application should now be running locally. You can access the front-end application in your browser and use it to interact with the back-end API.
 
-The back-end API will be available at http://localhost:8000.
+The back-end API will be available at http://localhost:80.
 The front-end application will be available at http://localhost:4200.
 
 ### Conclusion
