@@ -43,10 +43,6 @@ The front-end application is built with Angular and provides a user interface fo
    ```bash
    git clone https://github.com/your-repo/contact-list-management.git
    cd contact-list-management
-   
-2. Rename the .env.example file in the back-end directory to .env.
-   ```bash
-   mv backend/.env.example backend/.env
 
 ### Running the Application
 
