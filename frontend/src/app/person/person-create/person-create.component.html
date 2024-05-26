@@ -1,36 +1,40 @@
 <div class="container mt-5">
-    <h2 class="mb-3">Adicionar Novo Contato</h2>
+    <h1>Criar Pessoa</h1>
     <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
+      <div class="mb-3">
         <label for="name" class="form-label">Nome</label>
-        <input id="name" type="text" class="form-control" formControlName="name">
+        <input id="name" formControlName="name" class="form-control" />
         <div *ngIf="personForm.get('name')?.invalid && (personForm.get('name')?.dirty || personForm.get('name')?.touched)" class="text-danger">
-            <div *ngIf="personForm.get('name')?.errors?.['required']">Nome é obrigatório.</div>
+          Nome é obrigatório.
         </div>
+      </div>
+      <div formArrayName="contacts" *ngFor="let contact of contacts().controls; let i = index">
+        <div [formGroupName]="i" class="border rounded p-3 mb-3">
+          <div class="mb-3">
+            <label for="contactType" class="form-label">Tipo de Contato</label>
+            <select id="contactType" class="form-select" formControlName="type" (change)="onContactTypeChange(i)">
+              <option value="email">Email</option>
+              <option value="phone">Telefone</option>
+              <option value="whatsapp">Whatsapp</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="contactValue" class="form-label">Contato</label>
+            <input id="contactValue" formControlName="value" class="form-control" />
+            <div *ngIf="contact.get('value')?.invalid && (contact.get('value')?.dirty || contact.get('value')?.touched)" class="text-danger">
+              <div *ngIf="contact.get('value')?.errors?.['required']">Contato é obrigatório.</div>
+              <div *ngIf="contact.get('value')?.errors?.['pattern']">Formato de contato inválido.</div>
+              <div *ngIf="contact.get('value')?.errors?.['email']">Email inválido.</div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger" (click)="removeContact(i)">Remover</button>
         </div>
-        <div class="mb-3">
-        <label for="contactType" class="form-label">Tipo de Contato</label>
-        <select id="contactType" class="form-select" formControlName="contactType" (change)="onContactTypeChange()">
-            <option value="">Selecione</option>
-            <option value="phone">Telefone</option>
-            <option value="email">Email</option>
-            <option value="whatsapp">WhatsApp</option>
-        </select>
-        <div *ngIf="personForm.get('contactType')?.invalid && (personForm.get('contactType')?.dirty || personForm.get('contactType')?.touched)" class="text-danger">
-            <div *ngIf="personForm.get('contactType')?.errors?.['required']">Tipo de contato é obrigatório.</div>
-        </div>
-        </div>
-        <div class="mb-3">
-        <label for="contact" class="form-label">Contato</label>
-        <input id="contact" type="text" class="form-control" formControlName="contact">
-        <div *ngIf="personForm.get('contact')?.invalid && (personForm.get('contact')?.dirty || personForm.get('contact')?.touched)" class="text-danger">
-            <div *ngIf="personForm.get('contact')?.errors?.['required']">Contato é obrigatório.</div>
-            <div *ngIf="personForm.get('contact')?.errors?.['pattern']">Formato de contato inválido.</div>
-            <div *ngIf="personForm.get('contact')?.errors?.['email']">Email inválido.</div>
-        </div>
-        </div>
-        <button type="submit" class="btn btn-primary" [disabled]="personForm.invalid">Salvar</button>
-        <button type="button" class="btn btn-secondary" (click)="router.navigate(['/persons'])">Cancelar</button>
+      </div>
+      <button type="button" class="btn btn-primary mb-3" (click)="addContact()">Adicionar Contato</button>
+      <div>
+        <button type="submit" class="btn btn-success me-2" [disabled]="personForm.invalid">Salvar</button>
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+      </div>
     </form>
-</div>
+  </div>
   

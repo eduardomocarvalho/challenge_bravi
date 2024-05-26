@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Person;
+use App\Models\Contact;
 use Illuminate\Http\Request;
-
 class PersonController extends Controller
 {
     public function index()
@@ -14,8 +14,12 @@ class PersonController extends Controller
 
     public function store(Request $request)
     {
-        $person = Person::create($request->all());
-        return response()->json($person, 201);
+        $person = Person::create($request->only('name'));
+        $contacts = $request->input('contacts', []);
+        foreach ($contacts as $contact) {
+            $person->contacts()->create($contact);
+        }
+        return response()->json($person->load('contacts'), 201);
     }
 
     public function show($id)
@@ -26,8 +30,15 @@ class PersonController extends Controller
     public function update(Request $request, $id)
     {
         $person = Person::findOrFail($id);
-        $person->update($request->all());
-        return response()->json($person, 200);
+        $person->update($request->only('name'));
+
+        $person->contacts()->delete();
+        $contacts = $request->input('contacts', []);
+        foreach ($contacts as $contact) {
+            $person->contacts()->create($contact);
+        }
+
+        return response()->json($person->load('contacts'), 200);
     }
 
     public function destroy($id)

@@ -1,6 +1,10 @@
+export interface Contact {
+  type: string;
+  value: string;
+}
+
 export interface Person {
-  id?: string;
+  id: string;
   name: string;
-  contactType?: string;
-  contact?: string;
+  contacts: Contact[];
 }

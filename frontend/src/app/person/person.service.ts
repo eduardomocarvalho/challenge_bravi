@@ -7,27 +7,27 @@ import { Person } from './person.model';
   providedIn: 'root'
 })
 export class PersonService {
-  private apiUrl = 'http://localhost/api/people';
+  private baseUrl = 'http://localhost/api/people';  // Ajuste para o URL do seu backend
 
   constructor(private http: HttpClient) {}
 
-  getPeople(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.apiUrl);
+  getAllPersons(): Observable<Person[]> {
+    return this.http.get<Person[]>(this.baseUrl);
   }
 
   getPerson(id: string): Observable<Person> {
-    return this.http.get<Person>(`${this.apiUrl}/${id}`);
+    return this.http.get<Person>(`${this.baseUrl}/${id}`);
   }
 
-  addPerson(person: Person): Observable<Person> {
-    return this.http.post<Person>(this.apiUrl, person);
+  createPerson(person: Person): Observable<Person> {
+    return this.http.post<Person>(this.baseUrl, person);
   }
 
-  updatePerson(id: string, person: Person): Observable<Person> {
-    return this.http.put<Person>(`${this.apiUrl}/${id}`, person);
+  updatePerson(id: string, person: Person): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/${id}`, person);
   }
 
   deletePerson(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { PersonService } from '../person.service';
-import { Person } from '../person.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-person-list',
@@ -9,19 +8,12 @@ import { Person } from '../person.model';
   styleUrls: ['./person-list.component.css']
 })
 export class PersonListComponent implements OnInit {
-  persons: Person[] = [];
+  persons: any[] = [];
 
-  constructor(
-    private personService: PersonService,
-    public router: Router
-  ) {}
+  constructor(private personService: PersonService, public router: Router) { }
 
   ngOnInit(): void {
-    this.getPersons();
-  }
-
-  getPersons(): void {
-    this.personService.getPeople().subscribe((data: Person[]) => {
+    this.personService.getAllPersons().subscribe((data: any[]) => {
       this.persons = data;
     });
   }
@@ -32,7 +24,7 @@ export class PersonListComponent implements OnInit {
 
   deletePerson(id: string): void {
     this.personService.deletePerson(id).subscribe(() => {
-      this.getPersons();
+      this.persons = this.persons.filter(person => person.id !== id);
     });
   }
 }
