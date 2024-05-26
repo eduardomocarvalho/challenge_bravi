@@ -41,7 +41,7 @@ The front-end application is built with Angular and provides a user interface fo
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-repo/contact-list-management.git
+   git clone https://github.com/eduardomocarvalho/challenge_bravi.git
    cd contact-list-management
 
 ### Running the Application
