@@ -16,7 +16,7 @@ services:
       - app_network
     depends_on:
       - mysql
-    command: sh -c "php artisan migrate && php artisan config:cache && php artisan route:cache && php artisan view:cache && php-fpm"
+    command: sh -c "cp .env.example .env && composer install && php artisan migrate && php artisan config:cache && php artisan route:cache && php artisan view:cache && php-fpm"
 
   nginx:
     build:
@@ -66,6 +66,9 @@ services:
       - ./frontend:/app
     networks:
       - app_network
+    command: >
+      sh -c "npm install &&
+             ng serve --host 0.0.0.0"
 
 networks:
   app_network:
